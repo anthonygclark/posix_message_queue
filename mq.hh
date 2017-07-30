@@ -114,9 +114,7 @@ namespace ipc
              */
             enum flags : unsigned int
             {
-                /**< Note that 0x2000000 was added to make MQ_READ not contained in MQ_WRITE
-                 * so bitmasks would be easier to read. */
-                MQ_READ            = O_CREAT | O_CLOEXEC | O_RDONLY | 0x2000000,
+                MQ_READ            = O_CREAT | O_CLOEXEC | O_RDONLY,
                 MQ_RW              = O_CREAT | O_CLOEXEC | O_RDWR,
                 MQ_WRITE           = O_CREAT | O_CLOEXEC | O_WRONLY,
                 /**< Mainly used single-mode where a single message queue is used for both send and recv */
